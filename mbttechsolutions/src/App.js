@@ -1,11 +1,22 @@
 import React from 'react';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
+import Home from './components/pages/Home';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>MBT Tech Solutions</h1>
-    </div>
+    <>
+      <Router>
+      <Navbar />
+        <Routes>
+          <Route path='/' exact Component={Home}/>
+        </Routes>
+      </Router>
+      
+    </>
   );
 }
 
